@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>舞台管理員</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="textBox">
+            <div class="tabWrapper">
+                <div class="tab" v-for="tab in tabs" @touchstart="console.log(123)" @click="select(tabs.indexOf(tab))" :class="{select: index == tabs.indexOf(tab)}">
+                    <div class="close" @click="closeTab(tabs.indexOf(tab))">&#10005;</div>
+                    <div class="text" @dblclick="rename">{{tab.title}}</div>
+                </div>
+                <div class="tab add" @click="addTab">+</div>
+            </div>
+            <textarea v-if="tabs.length > 0" v-model="tabs[index].content" @keyup="write"></textarea>
+            <div class="ip">{{ip}}</div>
+        </div>
+        <div id="timer">
+            <div class="time">{{current}}</div>
+            <div class="optionWrapper">
+                <div class="option" v-for="(opt, index) in buttons" :class="{active: opt.choose}">
+                    <div class="close" @click="close(index)">&#10005;</div>
+                    <div class="text" @click="select(index)">{{opt.text}}</div>
+                </div>
+                <div class="option add" @click="add">+</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./components.js"></script>
+
+</body>
+
+</html>

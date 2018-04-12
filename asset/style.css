@@ -1,0 +1,143 @@
+@font-face {
+font-family: lato;
+src:url('./Lato-Regular.woff');
+}
+
+@font-face {
+font-family: noto;
+src:url("./NotoSans.otf") format("opentype");
+}
+body {
+    background-color: #333743;
+    font-family: lato;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#timer {
+    margin: 20px;
+    padding: 10px;
+    color: rgb(236, 244, 244);
+}
+
+.time {
+    font-size: 6vw;
+    text-align: center;
+}
+
+#textBox {
+    padding: 20px;
+    font-family: noto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: calc(100% - 20px);
+}
+
+textarea {
+    font-family: noto;    
+    border: none;
+    padding: 10px;
+    font-size: 40px;
+    height: calc(100% - 80px);  
+    width: calc(100% - 20px);
+    background-color: #404452;
+    color: rgb(236, 244, 244);
+    resize: none;
+    outline: none;
+    cursor: default;
+}
+
+.tabWrapper {
+    background-color: #2d313c;
+    height: 44px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.tab {
+    outline: none;
+    color: rgb(236, 244, 244);
+    font-size: 24px;
+    height: 100%;
+    min-width: 120px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -4px;
+    line-height: 42px;
+    background-color: #333743;
+    border: 1px solid rgba(0, 0, 0, 0.256);
+}
+
+.add {
+    text-align: center;
+}
+
+.close {
+    display: inline-block;
+    width: 20px;
+    margin: 0 0 0 10px ;
+    opacity: 0;
+    cursor: default;
+}
+
+.text {
+    min-width: 70%;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.tab:hover, .tab.select{
+    background-color: #444958;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.ip {
+    text-align: right;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+.optionWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+.option {
+    background-color: #404452;
+    color: rgb(236, 244, 244);
+    height: 50px;
+    border-radius: 4px;
+    font-size: 32px;
+    line-height: 52px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.option.active {
+    background-color: rgb(182, 216, 184);
+    color:#008c0099;
+}
+
+.option.add:hover {
+    background-color: #404452;
+}
+
+.option.add {
+    background-color: #333743;
+    border: 1px solid rgba(0, 0, 0, 0.256);
+
+}
