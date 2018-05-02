@@ -14,7 +14,7 @@
 
 1. 下載專案至電腦，或是使用`git clone`工具。
 
-        git clone 
+        git clone https://github.com/aljohn0422/stage_manager.git
 2. 開啟已編譯的程式。
     
     ### For Windows
