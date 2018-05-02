@@ -61,6 +61,6 @@ func main() {
 
 	http.Handle("/socket.io/", server)
 	http.Handle("/", http.FileServer(http.Dir("./asset")))
-	log.Printf("Open link in browser: %s:5000\n", ip)
+	log.Printf("Open the link in browser: %s:5000\n", ip)
 	log.Fatal(http.ListenAndServe(":5000", nil))
 }
