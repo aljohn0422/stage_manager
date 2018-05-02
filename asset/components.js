@@ -66,13 +66,7 @@ new Vue({
     data: {
         current: '',
         past: '',
-        buttons: [{
-            text: '內場',
-            choose: false
-        }, {
-            text: '回授',
-            choose: false
-        }]
+        buttons: []
     },
     methods: {
         update() {
