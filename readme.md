@@ -39,4 +39,5 @@
 2. 使用者可以任意新增文字按鈕。
 3. 使用者可以任意修改頁面資訊。
 4. 支援電腦/手機介面。
-![手機螢幕截圖](./readme/mobile.jpeg){:width="120px"}
+<!-- ![手機螢幕截圖](./readme/mobile.jpeg){:width="120px"} -->
+<img src="./readme/mobile.jpeg" width="250">
